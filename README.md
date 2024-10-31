@@ -4,25 +4,34 @@
 
 ##  Schedules
 
-### 1. Get(1)
+### 1. 전체 일정 조회
 
 | Method | URL        | descripe        |
 |:------:|------------|:----------------|
 |  GET   | /schedules | 전체 일정을 가지고 옵니다. |
 
-
 전체 일정을 가지고 옵니다.
+
+### 파라미터
+
+|    이름    | 타입       | 설명                                    |
+|:--------:|----------|:--------------------------------------|
+|    id    | Integer  | 일정 아이디                                |
+|   todo   | String   | 일정 내용                                 |
+|   name   | String   | 작성자명                                  |
+| password | String   | 비밀번호                                  |
+|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
 
 **Response**
 ```json=
 {
     schedules:[
         {
-            id:"[id]",
-            todo:"[할일]",
-            name:"[작성자명]",
-            password:"[비밀번호]",
-            date:"[작성/수정일]"
+            id:"1",
+            todo:"장보기",
+            name:"김르탄",
+            password:"1234",
+            date:"2024-10-31"
         }
         ...
     ]
@@ -39,7 +48,7 @@
 
 
 ---
-### 2. Get (2)
+### 2. 선택 일정 조회
 
 | Method | URL             | descripe         |
 |:------:|-----------------|:-----------------|
@@ -47,6 +56,16 @@
 
  
 선택한 일정을 가지고 옵니다.
+
+### 파라미터
+
+|    이름    | 타입       | 설명                                    |
+|:--------:|----------|:--------------------------------------|
+|    id    | Integer  | 일정 아이디                                |
+|   todo   | String   | 일정 내용                                 |
+|   name   | String   | 작성자명                                  |
+| password | String   | 비밀번호                                  |
+|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
 
 **Response**
 ```json=
@@ -69,19 +88,30 @@
 
 
 ---
-### 3. Post
+### 3. 일정 생성
 
 | Method | URL        | descripe                         |
 |:------:|------------|:---------------------------------|
 |  POST  | /schedules | Request를 보내면 그에 맞게 일정 DB에 추가합니다. |
 
+### 파라미터
+
+|    이름    | 타입       | 설명                                    |
+|:--------:|----------|:--------------------------------------|
+|    id    | Integer  | 일정 아이디                                |
+|   todo   | String   | 일정 내용                                 |
+|   name   | String   | 작성자명                                  |
+| password | String   | 비밀번호                                  |
+|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|  state   | String   | 상태코드                                  |
+
 **Request**
 ```json=
 {
-    todo:"[일정]",
-    name:"[작성자명]",
-    password:"[비밀번호]",
-    date:"[작성일]"
+    todo:"공부하기",
+    name:"홍길동",
+    password:"1234",
+    date:"2024-10-31"
 }
 ```
 일정을 새로 추가합니다.
@@ -89,8 +119,8 @@
 **Response**
 ```json=
 {
-    id:"[id]",
-    state:"[state]"
+    id:"3",
+    state:"200"
 }
 ```
 
@@ -102,28 +132,39 @@
 
 
 ---
-### 4. Patch
+### 4. 일정 수정
 
 | Method | URL        | descripe                              |
 |:------:|------------|:--------------------------------------|
 | Patch  | /schedules | Request 를 보내면 그에 맞게 일정 DB에 정보를 변경합니다. |
 
+### 파라미터
+
+|    이름    | 타입       | 설명                                    |
+|:--------:|----------|:--------------------------------------|
+|    id    | Integer  | 일정 아이디                                |
+|   todo   | String   | 일정 내용                                 |
+|   name   | String   | 작성자명                                  |
+| password | String   | 비밀번호                                  |
+|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|  state   | String   | 상태코드                                  |
+
 **Request**
 ```json=
 {
-    id:"[일정 id]",
-    todo:"[일정]",
-    name:"[작성자명]",
-    password:"[비밀번호]",
-    date:"[수정일]",
+    id:"5",
+    todo:"식사하기",
+    name:"김르탄",
+    password:"1234",
+    date:"2024-10-31",
 }
 ```
-일정을 변경합니다.
+일정을 수정합니다.
 
 **Response**
 ```json=
 {
-    state:"[state]"
+    state:"200"
 }
 ```
 
@@ -135,16 +176,22 @@
 
 
 ---
-### 5. Delete
+### 5. 일정 삭제
 
 | Method | URL        | descripe                               |
 |:------:|------------|:---------------------------------------|
 | Delete | /schedules | Request 를 보내면 그에 맞게 일정 DB에서 정보를 삭제합니다. |
 
+### 파라미터
+|  이름   | 타입       | 설명     |
+|:-----:|----------|:-------|
+|  id   | Integer  | 일정 아이디 |
+| state | String   | 상태코드   |
+
 **Request**
 ```json=
 {
-    id:"[id]"
+    id:"5"
 }
 ```
 일정을 삭제합니다.
@@ -152,7 +199,7 @@
 **Response**
 ```json=
 {
-    state:"[state]"
+    state:"200"
 }
 ```
 
