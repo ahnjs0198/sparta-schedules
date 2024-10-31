@@ -14,13 +14,13 @@
 
 ### 파라미터
 
-|    이름     | 타입       | 설명                                    |
-|:---------:|----------|:--------------------------------------|
-|    id     | Integer  | 일정 아이디                                |
-|   todo    | String   | 일정 내용                                 |
-|   name    | String   | 작성자명                                  |
-| password  | String   | 비밀번호                                  |
-| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|    이름     | 타입       | 설명                                                   |
+|:---------:|----------|:-----------------------------------------------------|
+|    id     | Integer  | 일정 아이디                                               |
+|   todo    | String   | 일정 내용                                                |
+|   name    | String   | 작성자명                                                 |
+| password  | String   | 비밀번호                                                 |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss] |
 
 **Response**
 ```json=
@@ -65,7 +65,7 @@
 |   todo    | String   | 일정 내용                                 |
 |   name    | String   | 작성자명                                  |
 | password  | String   | 비밀번호                                  |
-| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss] |
 
 **Response**
 ```json=
@@ -102,7 +102,7 @@
 |   todo    | String   | 일정 내용                                 |
 |   name    | String   | 작성자명                                  |
 | password  | String   | 비밀번호                                  |
-| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss] |
 |   state   | String   | 상태코드                                  |
 
 **Request**
@@ -146,7 +146,7 @@
 |   todo    | String   | 일정 내용                                 |
 |   name    | String   | 작성자명                                  |
 | password  | String   | 비밀번호                                  |
-| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss] |
 |   state   | String   | 상태코드                                  |
 
 **Request**
