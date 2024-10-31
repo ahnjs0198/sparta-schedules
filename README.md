@@ -14,13 +14,13 @@
 
 ### 파라미터
 
-|    이름    | 타입       | 설명                                    |
-|:--------:|----------|:--------------------------------------|
-|    id    | Integer  | 일정 아이디                                |
-|   todo   | String   | 일정 내용                                 |
-|   name   | String   | 작성자명                                  |
-| password | String   | 비밀번호                                  |
-|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|    이름     | 타입       | 설명                                    |
+|:---------:|----------|:--------------------------------------|
+|    id     | Integer  | 일정 아이디                                |
+|   todo    | String   | 일정 내용                                 |
+|   name    | String   | 작성자명                                  |
+| password  | String   | 비밀번호                                  |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
 
 **Response**
 ```json=
@@ -31,7 +31,7 @@
             todo:"장보기",
             name:"김르탄",
             password:"1234",
-            date:"2024-10-31"
+            updatedAt:"2024-10-31"
         }
         ...
     ]
@@ -59,13 +59,13 @@
 
 ### 파라미터
 
-|    이름    | 타입       | 설명                                    |
-|:--------:|----------|:--------------------------------------|
-|    id    | Integer  | 일정 아이디                                |
-|   todo   | String   | 일정 내용                                 |
-|   name   | String   | 작성자명                                  |
-| password | String   | 비밀번호                                  |
-|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|    이름     | 타입       | 설명                                    |
+|:---------:|----------|:--------------------------------------|
+|    id     | Integer  | 일정 아이디                                |
+|   todo    | String   | 일정 내용                                 |
+|   name    | String   | 작성자명                                  |
+| password  | String   | 비밀번호                                  |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
 
 **Response**
 ```json=
@@ -74,7 +74,7 @@
     todo:"[할일]",
     name:"[작성자명]",
     password:"[비밀번호]",
-    date:"[작성/수정일]"   
+    updatedAt:"[작성/수정일]"   
 }
 ```
 
@@ -96,14 +96,14 @@
 
 ### 파라미터
 
-|    이름    | 타입       | 설명                                    |
-|:--------:|----------|:--------------------------------------|
-|    id    | Integer  | 일정 아이디                                |
-|   todo   | String   | 일정 내용                                 |
-|   name   | String   | 작성자명                                  |
-| password | String   | 비밀번호                                  |
-|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
-|  state   | String   | 상태코드                                  |
+|    이름     | 타입       | 설명                                    |
+|:---------:|----------|:--------------------------------------|
+|    id     | Integer  | 일정 아이디                                |
+|   todo    | String   | 일정 내용                                 |
+|   name    | String   | 작성자명                                  |
+| password  | String   | 비밀번호                                  |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|   state   | String   | 상태코드                                  |
 
 **Request**
 ```json=
@@ -111,7 +111,7 @@
     todo:"공부하기",
     name:"홍길동",
     password:"1234",
-    date:"2024-10-31"
+    updatedAt:"2024-10-31"
 }
 ```
 일정을 새로 추가합니다.
@@ -140,14 +140,14 @@
 
 ### 파라미터
 
-|    이름    | 타입       | 설명                                    |
-|:--------:|----------|:--------------------------------------|
-|    id    | Integer  | 일정 아이디                                |
-|   todo   | String   | 일정 내용                                 |
-|   name   | String   | 작성자명                                  |
-| password | String   | 비밀번호                                  |
-|   date   | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
-|  state   | String   | 상태코드                                  |
+|    이름     | 타입       | 설명                                    |
+|:---------:|----------|:--------------------------------------|
+|    id     | Integer  | 일정 아이디                                |
+|   todo    | String   | 일정 내용                                 |
+|   name    | String   | 작성자명                                  |
+| password  | String   | 비밀번호                                  |
+| updatedAt | Datetime | 작성/수정일, ISO 8601<br/>[YYYY]-[MM]-[DD] |
+|   state   | String   | 상태코드                                  |
 
 **Request**
 ```json=
@@ -156,7 +156,7 @@
     todo:"식사하기",
     name:"김르탄",
     password:"1234",
-    date:"2024-10-31",
+    updatedAt:"2024-10-31",
 }
 ```
 일정을 수정합니다.
