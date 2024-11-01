@@ -2,22 +2,24 @@
 CREATE TABLE schedules (
     id INT,
     todo STRING,
-    name STRING,
+    writer STRING,
     password STRING,
+    createdAt DATETIME,
     updatedAt DATETIME
+
 );
 
 -- 전체 일정 조회 query
-SELECT id, todo, name, updatedAt
+SELECT id, todo, writer, createdAt, updatedAt
 FROM schedules;
 
 -- 선택 일정 조회 query
-SELECT id, todo, name, updatedAt
+SELECT id, todo, writer, createdAt, updatedAt
 FROM schedules
 WHERE id = 1;
 
 -- 일정 생성 query
-INSERT INTO schedules (id, todo, name, updatedAt)
+INSERT INTO schedules (id, todo, writer, createdAt)
 VALUES (1, '장보기', '김르탄','1234','2024-10-31 19:51:00');
 
 -- 일정 수정 query
